@@ -1,43 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <head>
+        <meta charset="utf-8">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+        <meta name="description" content="Personal website and portfolio.">
+        <meta name="keywords" content="felix, baker, fbaker, personal website, portfolio">
+        <meta name="author" content="Felix Baker">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <meta name="google-site-verification" content="QYxU4tPWRqYfP-gS2PBU0Uoqw9JXqOnotw9c8uoKg8k" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#000000">
+
+        <!-- social stuff -->
+
+        <meta property="og:title" content=FBaker>
+		<meta property="og:description" content="Personal website and portfolio.">
+		<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/favicon.png?alt=media&token=ad6a8df5-817e-471b-ad3b-aaa1b446f1e2">
+		<meta property="og:url" content="https://fbaker.info/">
+		<meta name="twitter:card" content="summary">
+
+        <!--  Non-Essential, But Recommended -->
+
+		<meta property="og:site_name" content="Felix Baker">
+        <meta name="twitter:image:alt" content="Felix Baker">
+        <!-- social stuff -->
+
+        <!--
+        manifest.json provides metadata used when your web app is added to the
+        homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+        -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
+
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+        -->
+        <title>Felix Baker</title>
+    </head>
+    <body>
+        <noscript>
+            Felix Baker's personal website and portfolio.<br/>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div id="root"></div>
+    </body>
+
+    <!-- <script src="https://use.fontawesome.com/188d405acc.js"></script> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- structured data -->
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Felix Baker",
+          "url": "https://fbaker.info/",
+          "sameAs": [
+            "https://www.linkedin.com/in/f-baker/"
+          ]
+        }
+    </script>
+
 </html>
