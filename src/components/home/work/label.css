@@ -1,26 +1,26 @@
-.label {    
+.label {
     padding: 8px;
     margin: 4px;
 
     text-transform: uppercase;
     text-align: center;
-    
+
     background-color: transparent;
 
     border-radius: 6px;
 
-    -webkit-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    -ms-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
 }
 
-.label-minimal {    
+.label-minimal {
     padding: 5px;
     margin: 2px;
 
     text-align: center;
-    
+
     background-color: transparent;
 
     color: rgba(255, 255, 255, 0.90);

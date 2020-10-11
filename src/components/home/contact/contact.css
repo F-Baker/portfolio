@@ -12,6 +12,13 @@
 .contact-social-group {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.footer-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-flow: wrap;
 }

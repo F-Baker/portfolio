@@ -7,8 +7,6 @@ import scrollToElement from 'scroll-to-element';
 import { fetchProjects } from "../../redux/actions/projects";
 
 import Navbar from "./Navbar";
-import Header from "./header/Header";
-
 import homeSections from "./homeSections"
 
 import "./home.css"
@@ -94,7 +92,6 @@ class Home extends Component {
                     <Navbar items={homeSections} onItemClick={this.scrollToSection} currentSection={currentSection} currentScroll={currentScroll} />
                 </div>
 
-                <Header />
 
                 { homeSections
                     .filter( section => section.component )

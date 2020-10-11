@@ -16,12 +16,12 @@ class Contact extends Component {
 
     _extractEmail = socials => {
         const email = socials.find( social => social.name === "email");
-        
+
         const index = socials.indexOf(email);
         const filteredSocials = socials.splice(index, 1);
 
         return { filteredSocials, email}
-    }    
+    }
 
     render () {
         const { socials } = this.props;
@@ -29,16 +29,16 @@ class Contact extends Component {
 
         return (
             <div className="home-section contact-container">
-                <div>
-                    If you want to say something you can send me an email, or reach out on social media :)
+                <div className="footer-note">
+                    See anything you like?  Send me a message:
                 </div>
 
                 <div className="contact-social-group">
-                    { email && <ContactItem icon={email.icon} text={email.text} url={email.url}/> }
-                </div>
-
-                <div className="contact-social-group">
+                    { email && <ContactItem icon={email.icon} url={email.url}/> }
                     { filteredSocials.map( social => <ContactItem key={social.name} icon={social.icon} text={social.text} url={social.url} />) }
+                </div>
+
+                <div className="contact-social-group">
                 </div>
             </div>
         );
