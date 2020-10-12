@@ -2,7 +2,7 @@
   "name": "fbaker.info",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://f-baker.github.io/portfolio/",
+  "homepage": "https://f-baker.github.io/",
   "dependencies": {
     "all": "^0.0.0",
     "immutable": "^4.0.0-rc.12",
