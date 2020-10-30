@@ -89,7 +89,7 @@ export default {
             name: "Trello",
             subtitle: "This site's board",
             description: "Here's this site's kanban board.  I've implemented an abbreviated technique to make trello work",
-            links: [{url: "https://trello.com/b/KEZWJEEz/portfolio", name: "Open projects", icon: "fab fa-trello"}],
+            links: [{url: "https://trello.com/b/KEZWJEEz/portfolio", name: "Board", icon: "fab fa-trello"}],
             secondaryLinks: [{
                 url: "#",
                 name: "#",
