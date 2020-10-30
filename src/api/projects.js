@@ -50,7 +50,7 @@ export default {
             labels: ["DevOps", "Jenkins"],
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/jenkins-ci_512.png?alt=media&token=52257c71-fc2b-40a8-84b2-208f15bacfb1",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/jenkins_1024_500.png?alt=media&token=55e3b2dc-d854-4248-9aec-f01b1500096a",
-            highlight: true
+            highlight: false
         },
         {
             id: "docker",
@@ -66,23 +66,39 @@ export default {
             labels: ["Docker", "DevOps"],
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/Docker_512.png?alt=media&token=07995f85-06e6-421d-9be2-ad98697e81a0",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/Docker_1024.png?alt=media&token=ccb75b33-2771-4813-96bf-42ebc84b272a",
-            highlight: true
+            highlight: false
         },
         {
-            id: "audio",
-            name: "Audio engineering and Composition",
-            subtitle: "I'm also an audio engineer and composer",
-            description: "Audio engineering exposed me to the world of audio editing and manipulation software.  This phase sparked my desire to develop software.  Here are some of my projects:",
-            links: [{url: "https://youtube.com/channel/UCg6EX6uyyGOr-ttQSnWvDLQ", name: "Videos", icon: "fab fa-youtube"}],
+            id: "MakeDockerReact",
+            name: "Make-Docker-React",
+            subtitle: "Scipted container creation",
+            description: "This folder contains a make script to deploy an existing application to a container.",
+            links: [{url: "https://github.com/F-Baker/docker-make-mern", name: "Repo", icon: "fab fa-github"}],
             secondaryLinks: [{
-                url: "https://wishes.bandcamp.com/",
-                name: "bandcamp",
-                icon: "fab fa-bandcamp"
+                url: "#",
+                name: "#",
+                icon: "#"
             }],
-            labels: ["Audio"],
-            imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/wishes_cuatro.jpg?alt=media&token=4857d3f5-5d34-4c4b-981e-ed2a756687d1",
-            img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/wishes_1024.png?alt=media&token=dd3b224e-f6dd-4739-a1ed-d46674efe2a8",
-            highlight: true
+            labels: ["mern"],
+            imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
+            img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
+            highlight: false
         }
+        {
+            id: "trello",
+            name: "Trello",
+            subtitle: "This site's board",
+            description: "Here's this site's kanban board.  I've implemented an abbreviated technique to make trello work",
+            links: [{url: "https://trello.com/b/KEZWJEEz/portfolio", name: "Open projects", icon: "fab fa-trello"}],
+            secondaryLinks: [{
+                url: "#",
+                name: "#",
+                icon: "#"
+            }],
+            labels: ["trello", "kanban"],
+            imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/trello_524_256.png?alt=media&token=f9f4f339-48aa-4603-91d8-c957abb3c8e3",
+            img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/trello_1024_500.png?alt=media&token=bca17fad-074d-41f2-a28c-15c127e8b066",
+            highlight: true
+        },
     ]))
 }
