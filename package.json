@@ -2,7 +2,6 @@
   "name": "fbaker.info",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fbaker-portfolio.web.app//",
   "dependencies": {
     "all": "^0.0.0",
     "immutable": "^4.0.0-rc.12",
@@ -21,7 +20,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "firebase deploy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
