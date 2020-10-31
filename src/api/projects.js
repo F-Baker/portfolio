@@ -83,7 +83,7 @@ export default {
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
             highlight: false
-        }
+        },
         {
             id: "trello",
             name: "Trello",
