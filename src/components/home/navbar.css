@@ -36,9 +36,9 @@
     .navbar-logo {
         margin: 20px;
         padding: 16px;
-    
+
         font-size: 18px;
-    
+
         color: #333;
         border: 2px dashed #f69c55;
     }
@@ -59,9 +59,9 @@
     .navbar-logo {
         margin: 20px;
         padding: 16px;
-    
+
         font-size: 18px;
-    
+
         color: #333;
         border: 2px dashed #f69c55;
     }
@@ -76,7 +76,7 @@
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'ui-sans-serif', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 3px;

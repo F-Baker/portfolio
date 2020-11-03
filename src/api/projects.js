@@ -4,31 +4,31 @@ export default {
             id: "spring",
             name: "Spring ",
             subtitle: "Example projects using the Spring suite of tools",
-            description: "Here are some of the various Spring example projects I've worked on. <br/> Projects are divided into their respective categories.",
+            description: "Hey ho, the front end is moving faster than the back end!  This is a placeholder for spring projects that will be replaced one I've finished a few more non-trivial, working, reproduce-able POCs. Ask me something about Java or Spring!",
             links: [{url: "", name: "Open Project", icon: "fab fa-github"}],
             secondaryLinks: [{
                 // url: "",
                 // name: "This is where an excellent customer review will go",
                 // icon: "fas fa-external-link-alt"
             }],
-            labels: ["App", "Spring", "Examples"],
+            labels: ["App", "Spring", ],
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/spring-java_1024_500.png?alt=media&token=64148998-8f3a-45dc-9ff1-fc44026a9733",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/spring-java_524_256.png?alt=media&token=e81af7ab-4c49-4da5-82d3-d7bcdf978cfb",
-            highlight: true
+            highlight: false
         },
         {
             id: "react",
             name: "React",
-            subtitle: "Example projects using React",
-            description: "Here are some projects showing the differents aspects of React that I've worked on.  ",
+            subtitle: "Personal website",
+            description: "I found this while looking for React SPA projects to wrangle and host with GitHub pages.  Pierfrancesco Soffritti, the original author, was kind enough to post his source code to GitHub under the MIT license.  I retyped the entire project from scratch and learned a ton about OOP with JS and abstraction with redux. I've also migrated to NPM and back to yarn, GitHub pages to Firebase, and GitHub repo to GitLab.  Take a look at my project board if you want to see the where I'm at with development.",
             links: [
-                {url: "", name: "Open project", icon: "fab fa-github"},
+                {url: "https://gitlab.com/F-Baker/portfolio", name: "Open project", icon: "fab fa-gitlab"},
             ],
             secondaryLinks: [
                 {
-                    url: "",
-                    name: "",
-                    icon: ""
+                    url: "https://github.com/PierfrancescoSoffritti/pierfrancescosoffritti.com",
+                    name: "Original source code",
+                    icon: "fab fa-github"
                 }
             ],
             labels: ["react", "javascript"],
@@ -39,33 +39,17 @@ export default {
         {
             id: "jenkins",
             name: "Jenkins",
-            subtitle: "Product deployments via Jenkins",
-            description: "Here are some of the personal projects I've worked on using Jenkins for deployment.  This site is an active example of Jenkins automation using GitHub repo and Actions.",
-            links: [{url: "", name: "Open projects", icon: "fab fa-github"}],
+            subtitle: "Automated deployments via Jenkins",
+            description: "I initially intended to use jenkins running via a local container to automate this site's deployment but found that it means exposing a local port to the internet.  I'm not thrilled at that thought and decided to make this an opportunity to learn CI with GitLab instead.  So for the time being, this placeholder is not being actively developed.",
+            links: [{url: "", name: "", icon: ""}],
             secondaryLinks: [{
                 url: "",
                 name: "",
                 icon: ""
             }],
-            labels: ["DevOps", "Jenkins"],
+            labels: ["Jenkins"],
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/jenkins-ci_512.png?alt=media&token=52257c71-fc2b-40a8-84b2-208f15bacfb1",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/jenkins_1024_500.png?alt=media&token=55e3b2dc-d854-4248-9aec-f01b1500096a",
-            highlight: false
-        },
-        {
-            id: "docker",
-            name: "Docker",
-            subtitle: "Containers for every need",
-            description: "Here are some of the fun things I've done with Docker",
-            links: [{url: "", name: "Open projects", icon: "fab fa-github"}],
-            secondaryLinks: [{
-                url: "",
-                name: "",
-                icon: ""
-            }],
-            labels: ["Docker", "DevOps"],
-            imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/Docker_512.png?alt=media&token=07995f85-06e6-421d-9be2-ad98697e81a0",
-            img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/Docker_1024.png?alt=media&token=ccb75b33-2771-4813-96bf-42ebc84b272a",
             highlight: false
         },
         {
@@ -79,7 +63,7 @@ export default {
                 name: "",
                 icon: ""
             }],
-            labels: ["mern"],
+            labels: ["mern", "docker"],
             imgSmall: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
             img: "https://firebasestorage.googleapis.com/v0/b/fbaker-portfolio.appspot.com/o/mern_1024_500.png?alt=media&token=2eb215c6-8afc-48b4-bcc2-d3618c9112a3",
             highlight: false

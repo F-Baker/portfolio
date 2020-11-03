@@ -6,12 +6,12 @@
 
 .profile-picture-about {
     display: none;
-    height: 100px;
-    width: 100px;
-    max-height: 100px;
-    max-width: 100px;
-    min-height: 100px;
-    min-width: 100px;
+    height: auto;
+    width: auto;
+    max-height: 308px;
+    max-width: 231px;
+    min-height: auto;
+    min-width: auto;
 
     border: 2px solid rgba(76, 175, 80, 0.6);
 }
@@ -19,7 +19,6 @@
 .about-text {
     font-size: 11px;
     line-height: 2em;
-    text-transform: uppercase;
     color: #333;
 }
 
@@ -46,12 +45,12 @@
     .profile-picture-about {
         display: block;
 
-        height: 350px;
-        width: 300px;
-        max-height: 300px;
-        max-width: 350px;
-        min-height: 350px;
-        min-width: 300px;
+        height: auto;
+        width: auto;
+        max-height: 308px;
+        max-width: 231px;
+        min-height: auto;
+        min-width: auto;
 
         margin-right: 60px;
 

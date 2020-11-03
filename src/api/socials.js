@@ -13,12 +13,6 @@ export default {
             url: "https://github.com/f-baker"
         },
         {
-            name: "medium",
-            text: "",
-            icon: "fab fa-medium-m",
-            url: "https://medium.com/@f.baker"
-        },
-        {
             name: "linkedin",
             text: "",
             icon: "fab fa-linkedin-in",
