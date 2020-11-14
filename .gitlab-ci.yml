@@ -1,8 +1,6 @@
 image: node:latest
 
 before_script:
-  - npm install
-  - npm audit fix
   - npm i -g firebase-tools
 
 prod-hosting:
