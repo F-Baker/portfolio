@@ -1,6 +1,8 @@
 image: node:latest
 
 before_script:
+  - npm install
+  - npm audit fix
   - npm i -g firebase-tools
 
 prod-hosting:
@@ -13,6 +15,5 @@ prod-hosting:
   script:
       - yarn
       - yarn build
-      - firebase use --token $FIREBASE_TOKEN production
       - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_TOKEN
 
