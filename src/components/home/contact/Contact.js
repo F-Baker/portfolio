@@ -29,9 +29,9 @@ class Contact extends Component {
 
         return (
             <div className="home-section contact-container">
-                <div className="footer-note">
-                    See anything you like?  Send me a message:
-                </div>
+                {/*<div className="footer-note">*/}
+                {/*    See anything you like?  Send me a message:*/}
+                {/*</div>*/}
 
                 <div className="contact-social-group">
                     { email && <ContactItem icon={email.icon} url={email.url}/> }

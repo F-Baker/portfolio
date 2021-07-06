@@ -16,7 +16,7 @@ export default {
             name: "linkedin",
             text: "",
             icon: "fab fa-linkedin-in",
-            url: "https://www.linkedin.com/in/fbaker/en"
+            url: "https://www.linkedin.com/in/f-baker"
         },
 
     ]))
