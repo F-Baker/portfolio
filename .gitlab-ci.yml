@@ -7,7 +7,7 @@ prod-hosting:
   stage: deploy
   environment:
     name: production
-    url: https://fbaker.info
+    url: https://felixbaker.com
   only:
     - master
   script:
