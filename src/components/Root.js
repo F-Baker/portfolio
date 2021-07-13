@@ -1,20 +1,14 @@
 import React from 'react';
-
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import store from "../redux/store";
-
-import Routes from './Routes'
-
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-PCXWPFYCMS');
+import Routes from './Routes';
 
 const Root = () => {
-
     return (
         <Provider store={store}>
-            <Routes />
+            <Routes/>
         </Provider>
     );
-}
+};
 
 export default Root;

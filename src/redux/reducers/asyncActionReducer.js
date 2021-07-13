@@ -1,13 +1,13 @@
-import { actionTypes, status } from "../actions/_constants"
+import {actionTypes, status} from "../actions/_constants";
 
 const FETCH_SUCCESS = actionTypes.FETCH + status.SUCCESS;
 const FETCH_FAILURE = actionTypes.FETCH + status.FAILURE;
 const FETCH_START = actionTypes.FETCH + status.START;
 
-export default ({ actionTypePrefix, objectsInitialState, isFetchingInitialState }) => ({
+export default ({actionTypePrefix, objectsInitialState, isFetchingInitialState}) => ({
 
     objectsReducer: (state = objectsInitialState, action) => {
-        switch(action.type) {
+        switch (action.type) {
             case actionTypePrefix + FETCH_SUCCESS:
                 return state.concat(action.payload);
             default:
@@ -16,7 +16,7 @@ export default ({ actionTypePrefix, objectsInitialState, isFetchingInitialState 
     },
 
     isFetchingReducer: (state = isFetchingInitialState, action) => {
-        switch(action.type) {
+        switch (action.type) {
             case actionTypePrefix + FETCH_SUCCESS || actionTypePrefix + FETCH_FAILURE:
                 return false;
             case actionTypePrefix + FETCH_START:
@@ -25,5 +25,4 @@ export default ({ actionTypePrefix, objectsInitialState, isFetchingInitialState 
                 return state;
         }
     }
-
-})
+});

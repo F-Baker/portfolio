@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: 16px;
-
     font-size: 12px;
     line-height: 2em;
     color: #333;

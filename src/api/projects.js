@@ -20,7 +20,7 @@ export default {
             id: "react",
             name: "React",
             subtitle: "Personal website",
-            description: "This site adapted from an example I found via github.  Now that I have more training in React it will be replaced.",
+            description: "This site was made using React and Redux with a CI pipeline implemented via GitLab.  Redux handles the population of the projects and social media links",
             links: [
                 {url: "https://gitlab.com/F-Baker/portfolio", name: "Open project", icon: "fab fa-gitlab"},
             ],

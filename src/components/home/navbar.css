@@ -7,14 +7,7 @@
 
     .navbar-item-dimensions {
         margin: 4px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .navbar-logo {
-        display: none;
+        padding: 16px 8px;
     }
 }
 
@@ -27,20 +20,7 @@
 
     .navbar-item-dimensions {
         margin: 8px;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .navbar-logo {
-        margin: 20px;
-        padding: 16px;
-
-        font-size: 18px;
-
-        color: #333;
-        border: 2px dashed #f69c55;
+        padding: 16px 8px;
     }
 }
 
@@ -54,16 +34,6 @@
     .navbar-item-dimensions {
         margin: 8px;
         padding: 16px;
-    }
-
-    .navbar-logo {
-        margin: 20px;
-        padding: 16px;
-
-        font-size: 18px;
-
-        color: #333;
-        border: 2px dashed #f69c55;
     }
 }
 
@@ -92,7 +62,7 @@
 
 .elevated {
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.10);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10);
 }
 
 .navbar-item {
@@ -115,50 +85,5 @@
 
 .navbar-item-selected {
     border-radius: 4px;
-
-    -webkit-animation: navbar-item-background-change 10000ms infinite;
-    -moz-animation: navbar-item-background-change 10000ms infinite;
-    -o-animation: navbar-item-background-change 10000ms infinite;
-    -ms-animation: navbar-item-background-change 10000ms infinite;
-    animation: navbar-item-background-change 10000ms infinite;
-}
-
-@-webkit-keyframes navbar-item-background-change {
-    0% { background-color: rgba(33, 150, 243, 0.2); }
-    25% { background-color: rgba(76, 175, 80, 0.2); }
-    50% { background-color: rgba(255, 193, 7, 0.2); }
-    75% { background-color: rgba(255, 87, 34, 0.2); }
-    100% { background-color: rgba(33, 150, 243, 0.2); }
-}
-
-@-moz-keyframes navbar-item-background-change {
-    0% { background-color: rgba(33, 150, 243, 0.2); }
-    25% { background-color: rgba(76, 175, 80, 0.2); }
-    50% { background-color: rgba(255, 193, 7, 0.2); }
-    75% { background-color: rgba(255, 87, 34, 0.2); }
-    100% { background-color: rgba(33, 150, 243, 0.2); }
-}
-
-@-ms-keyframes navbar-item-background-change {
-    0% { background-color: rgba(33, 150, 243, 0.2); }
-    25% { background-color: rgba(76, 175, 80, 0.2); }
-    50% { background-color: rgba(255, 193, 7, 0.2); }
-    75% { background-color: rgba(255, 87, 34, 0.2); }
-    100% { background-color: rgba(33, 150, 243, 0.2); }
-}
-
-@-o-keyframes navbar-item-background-change {
-    0% { background-color: rgba(33, 150, 243, 0.2); }
-    25% { background-color: rgba(76, 175, 80, 0.2); }
-    50% { background-color: rgba(255, 193, 7, 0.2); }
-    75% { background-color: rgba(255, 87, 34, 0.2); }
-    100% { background-color: rgba(33, 150, 243, 0.2); }
-}
-
-@keyframes navbar-item-background-change {
-    0% { background-color: rgba(33, 150, 243, 0.2); }
-    25% { background-color: rgba(76, 175, 80, 0.2); }
-    50% { background-color: rgba(255, 193, 7, 0.2); }
-    75% { background-color: rgba(255, 87, 34, 0.2); }
-    100% { background-color: rgba(33, 150, 243, 0.2); }
+    background-color: #8DBCF7;
 }

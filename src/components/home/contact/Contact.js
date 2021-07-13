@@ -1,41 +1,35 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-import ContactItem from "./ContactItem"
-
-import { fetchSocials } from "../../../redux/actions/socials";
-
-import "../../_common/common.css"
-import "./contact.css"
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import ContactItem from "./ContactItem";
+import {fetchSocials} from "../../../redux/actions/socials";
+import "../../_common/common.css";
+import "./contact.css";
 
 class Contact extends Component {
 
     componentWillMount = () => {
-        this.props.fetchSocials()
-    }
+        this.props.fetchSocials();
+    };
 
     _extractEmail = socials => {
-        const email = socials.find( social => social.name === "email");
+        const email = socials.find(social => social.name === "email");
 
         const index = socials.indexOf(email);
         const filteredSocials = socials.splice(index, 1);
 
-        return { filteredSocials, email}
-    }
+        return {filteredSocials, email};
+    };
 
-    render () {
-        const { socials } = this.props;
-        const { email, filteredSocials } = this._extractEmail(socials);
+    render() {
+        const {socials} = this.props;
+        const {email, filteredSocials} = this._extractEmail(socials);
 
         return (
             <div className="home-section contact-container">
-                {/*<div className="footer-note">*/}
-                {/*    See anything you like?  Send me a message:*/}
-                {/*</div>*/}
-
                 <div className="contact-social-group">
-                    { email && <ContactItem icon={email.icon} url={email.url}/> }
-                    { filteredSocials.map( social => <ContactItem key={social.name} icon={social.icon} text={social.text} url={social.url} />) }
+                    {email && <ContactItem icon={email.icon} url={email.url}/>}
+                    {filteredSocials.map(social => <ContactItem key={social.name} icon={social.icon} text={social.text}
+                                                                url={social.url}/>)}
                 </div>
 
                 <div className="contact-social-group">
@@ -47,10 +41,10 @@ class Contact extends Component {
 
 const mapStateToProps = store => ({
     socials: store.socials
-})
+});
 
 const mapDispatchToProps = dispatch => ({
     fetchSocials: (args) => dispatch(fetchSocials(args))
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

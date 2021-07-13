@@ -12,7 +12,6 @@
     max-width: 231px;
     min-height: auto;
     min-width: auto;
-
     border: 2px solid rgba(76, 175, 80, 0.6);
 }
 
@@ -28,7 +27,7 @@
 }
 
 .about-name {
-    color: #405773;
+    color: #8DBCF7;
 }
 
 .about-text-subtitle {
@@ -36,70 +35,22 @@
 }
 
 .about-cv {
+    color: #8DBCF7;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 /* desktop-medium */
 @media all and (min-width: 841px) {
     .profile-picture-about {
         display: block;
-
         height: auto;
         width: auto;
         max-height: 308px;
         max-width: 231px;
         min-height: auto;
         min-width: auto;
-
         margin-right: 60px;
-
-        border: 4px solid rgba(76, 175, 80, 0.6);
-
-        -webkit-animation: about-image-border-change 10000ms infinite;
-        -moz-animation: about-image-border-change 10000ms infinite;
-        -o-animation: about-image-border-change 10000ms infinite;
-        -ms-animation: about-image-border-change 10000ms infinite;
-        animation: about-image-border-change 10000ms infinite;
+        border: 4px solid #8DBCF7;
     }
-}
-
-@-webkit-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); }
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); }
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); }
-}
-
-@-moz-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); }
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); }
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); }
-}
-
-@-ms-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); }
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); }
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); }
-}
-
-@-o-keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); }
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); }
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); }
-}
-
-@keyframes about-image-border-change {
-    0% { border: 4px solid rgba(33, 150, 243, 0.4); }
-    25% { border: 4px solid rgba(76, 175, 80, 0.4); }
-    50% { border: 4px solid rgba(255, 193, 7, 0.4); }
-    75% { border: 4px solid rgba(255, 87, 34, 0.4); }
-    100% { border: 4px solid rgba(33, 150, 243, 0.4); }
 }

@@ -20,8 +20,8 @@
 }
 
 .route-fade-enter.route-fade-enter-active {
-	opacity: 1;
-	transition: opacity 600ms ease-in-out;
+    opacity: 1;
+    transition: opacity 600ms ease-in-out;
 }
 
 .route-fade-exit {
@@ -31,6 +31,6 @@
 }
 
 .route-fade-exit.route-fade-exit-active {
-	opacity: 0;
-	transition: opacity 0ms ease-in-out;
+    opacity: 0;
+    transition: opacity 0ms ease-in-out;
 }

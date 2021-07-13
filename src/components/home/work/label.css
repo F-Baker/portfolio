@@ -30,17 +30,17 @@
 }
 
 .common-label {
-    border: 1px solid #4CAF50;
+    border: 1px solid #8DBCF7;
 }
 
 .common-label:hover {
-    background-color: rgba(76, 175, 79, 0.5);
+    background-color: #8DBCF7;
     color: white;
     outline: 0;
 }
 
 .common-label-selected, .common-label-selected:hover {
-    background-color: #4CAF4F;
+    background-color: #8DBCF7;
     color: white;
     outline: 0;
 }
@@ -56,7 +56,7 @@
 }
 
 .special-label-selected, .special-label-selected:hover {
-    background-color: rgba(32, 149, 243, 1);
+    background-color: #8DBCF7;
     color: white;
     outline: 0;
 }

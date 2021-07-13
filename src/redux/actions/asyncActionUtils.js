@@ -1,4 +1,4 @@
-import { status } from "./_constants"
+import {status} from "./_constants";
 
 const getAsyncAction = ({actionTypePrefix, asyncFunc}) => {
 
@@ -9,33 +9,32 @@ const getAsyncAction = ({actionTypePrefix, asyncFunc}) => {
     const startAction = () => {
         return {
             type: actionTypeStart
-        }
-    }
+        };
+    };
 
     const successAction = payload => {
         return {
             type: actionTypeSuccess,
             payload: payload
-        }
-    }
+        };
+    };
 
     const failureAction = error => {
         return {
             type: actionTypeFailure,
             payload: error
-        }
-    }
+        };
+    };
 
     const asyncAction = args => {
         return dispatch => {
-            dispatch( startAction() );
+            dispatch(startAction());
             asyncFunc(args)
-                .then( data => dispatch( successAction(data) ) )
-                .catch( error => dispatch( failureAction(error) ) )
-        }
-    }
-
+                .then(data => dispatch(successAction(data)))
+                .catch(error => dispatch(failureAction(error)));
+        };
+    };
     return asyncAction;
-}
+};
 
 export default getAsyncAction;
