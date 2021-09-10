@@ -10,10 +10,10 @@ const About = () => {
             <img className="profile-picture-about" alt="" src={profilePic}/>
             <div className="about-text">
                 <span className="about-text-main">I'm <span className="about-name">Felix</span></span>
-                <br/><span className="about-text-subtitle">I am a web developer and I work in Java and Spring</span>
-                <br/><br/>I'm currently looking for a development position in Grenoble
+                <br/><span className="about-text-subtitle">I am a web developer and I work with Spring and React</span>
+                <br/><br/>
                 <br/><br/>Please have a look at my <a
-                href="https://drive.google.com/file/d/1h93j_6B4GssXcZ3UrgD3QFfNQWJc2-Nw/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tYoImKw1bA_eDBfN8hm5BpwgkPARs22F/view?usp=sharing"
                 target="_blank" rel="noopener noreferrer"><span
                 className="about-cv">resume</span></a> or scroll down to see my latest projects.
             </div>
