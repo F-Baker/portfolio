@@ -1,0 +1,4 @@
+﻿userPrincipalName,displayName,userType,jobTitle,department,accountEnabled
+test_account_2@sixtwocore.onmicrosoft.com,test_account_2,Member,Cloud Engineer,Infra,false
+test_account_3@sixtwocore.onmicrosoft.com,test_account_3,Member,Cloud Engineer,Infra,false
+test_account_4@sixtwocore.onmicrosoft.com,test_account_4,Member,Cloud Engineer,Infra,false
