@@ -1,0 +1,48 @@
+trigger:
+  - main
+
+variables:
+  - name: System.Debug
+    value: "false"
+  - name: repo_name
+    value: "ado-tutorial-build-scan"
+
+stages:
+  - stage: buildAndScan
+    displayName: "Build and scan the image"
+    jobs:
+      - job: build
+        displayName: "Build the image"
+        steps:
+
+          # https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/docker-v2?view=azure-pipelines&tabs=yaml
+          - task: Docker@2
+            displayName: "Build an image"
+            inputs:
+              repository: $(repo_name)
+              command: build
+              Dockerfile: ./build-and-scan/Dockerfile
+              tags: $(Build.SourceVersion)
+
+          # https://github.com/aquasecurity/trivy-azure-pipelines-task/blob/main/docs/trivyv2.md
+          - task: trivy@2
+            displayName: "Scan the image"
+            inputs:
+              version: "latest"
+              type: "image"
+              target: "$(repo_name):$(Build.SourceVersion)"
+              scanners: "vuln"
+              reports: "junit"
+              publish: true
+
+          # https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/publish-test-results-v2?view=azure-pipelines&tabs=trx%2Ctrxattachments%2Cyaml
+          - task: PublishTestResults@2
+            displayName: "Publish results to the Trivy tab"
+            inputs:
+              testResultsFormat: "JUnit"
+              testResultsFiles: |
+                $(TrivyCurrent.junitReport)
+                $(TrivyPrivate.junitReport)
+              searchFolder: "$(Agent.TempDirectory)"
+              testRunTitle: "Trivy"
+              publishRunAttachments: false
