@@ -1,0 +1,6 @@
+---
+dev:
+  hosts:
+    <configure RPI IP address here>:
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_user: <configure RPI remote user here>

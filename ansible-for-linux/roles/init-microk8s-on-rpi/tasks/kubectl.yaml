@@ -1,0 +1,64 @@
+---
+- name: "Install kubectl"
+  become: true
+  block:
+    - name: "Get latest kubectl version"
+      uri:
+        url: https://dl.k8s.io/release/stable.txt
+        return_content: yes
+        status_code: 200, 304
+      register: version
+
+    - name: "Download the latest kubectl release"
+      uri:
+        url: https://dl.k8s.io/release/{{ version.content }}/bin/linux/arm64/kubectl
+        dest: /home/{{ ansible_user }}
+        status_code: 200, 304
+      register: kubectl
+
+    - name: "Download the kubectl checksum file"
+      uri:
+        url: https://dl.k8s.io/{{ version.content }}/bin/linux/arm64/kubectl.sha256
+        dest: /home/{{ ansible_user }}
+        status_code: 200, 304
+
+    - name: "Validate the kubectl binary against the checksum file"
+      shell: echo "$(cat /home/{{ ansible_user }}/kubectl.sha256)"
+      register: source_chksum
+
+    - name: "Compute new checksum of kubectl binary"
+      shell: sha256sum /home/{{ ansible_user }}/kubectl | awk '{print $1}'
+      register: new_chksum
+
+    - name: "Assert that the kubectl binary is OK"
+      vars:
+        expected: "kubectl: OK"
+      assert:
+        that:
+          - source_chksum.stdout == new_chksum.stdout
+        fail_msg: "Checksum does not match {{ source_chksum.stdout }} != {{ new_chksum.stdout }}"
+        success_msg: "Successfully validated"
+
+    - name: "Copy kubectl and change permissions"
+      copy:
+        src: "{{ kubectl.path }}"
+        remote_src: yes
+        dest: /usr/local/bin/kubectl
+        owner: root
+        group: root
+        mode: "+x"
+
+    - name: "Check if kubectl is installed"
+      shell: kubectl version --client
+      register: client
+      failed_when: client.rc > 1
+
+    - name: "remove downloaded binaries from home"
+      file:
+        path: /home/{{ ansible_user }}/kubectl
+        state: absent
+
+    - name: "remove downloaded checksums from home"
+      file:
+        path: /home/{{ ansible_user }}/kubectl.sha256
+        state: absent

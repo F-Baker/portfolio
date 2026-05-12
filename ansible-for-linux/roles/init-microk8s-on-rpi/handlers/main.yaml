@@ -1,0 +1,13 @@
+---
+- name: restartssh
+  become: true
+  systemd_service:
+    name: ssh.socket
+    state: restarted
+    daemon_reload: true
+  listen: restartssh
+
+- name: restart docker
+  service:
+    name: docker
+    state: restarted

@@ -1,0 +1,12 @@
+# https://man.openbsd.org/sshd_config
+---
+
+- name: "Provision sshd_config from template"
+  become: true
+  template:
+    src: sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: 0644
+  notify: restartssh

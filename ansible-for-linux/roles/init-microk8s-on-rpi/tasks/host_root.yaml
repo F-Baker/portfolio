@@ -1,0 +1,21 @@
+---
+- name: "Configure root account"
+  become: true
+  block:
+    - name: "Root .bashrc"
+      template:
+        src: .bashrc
+        dest: ~/.bashrc
+        mode: 0644
+
+    - name: "Root .tmux.conf"
+      template:
+        src: .tmux.conf
+        dest: ~/.tmux.conf
+        mode: 0644
+
+    - name: "Root .hushlogin"
+      file:
+        path: ~/.hushlogin
+        state: touch
+

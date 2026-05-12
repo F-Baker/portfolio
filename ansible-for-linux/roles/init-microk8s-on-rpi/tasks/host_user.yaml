@@ -1,0 +1,17 @@
+---
+- name: "User .bashrc"
+  template:
+    src: .bashrc
+    dest: ~/.bashrc
+    mode: 0644
+
+- name: "User .tmux.conf"
+  template:
+    src: .tmux.conf
+    dest: ~/.tmux.conf
+    mode: 0644
+
+- name: "User .hushlogin"
+  file:
+    path: ~/.hushlogin
+    state: touch

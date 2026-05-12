@@ -1,0 +1,21 @@
+---
+- name: "Prepare host"
+  include_tasks: host.yaml
+
+- name: "Prepare user"
+  include_tasks: host_user.yaml
+
+- name: "Prepare root"
+  include_tasks: host_root.yaml
+
+- name: "Configure SSHD"
+  include_tasks: sshd.yaml
+
+- name: "Install docker"
+  include_tasks: docker.yaml
+
+- name: "Install kubectl"
+  include_tasks: kubectl.yaml
+
+- name: "Install microk8s"
+  include_tasks: microk8s.yaml

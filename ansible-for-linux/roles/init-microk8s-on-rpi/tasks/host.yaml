@@ -1,0 +1,32 @@
+---
+- name: "Configure timezone"
+  community.general.timezone:
+    name: "{{ timezone }}"
+
+- name: "Apt update && apt upgrade"
+  become: true
+  ansible.builtin.apt:
+    upgrade: full
+    state: latest
+    update_cache: yes
+
+- name: "Apt dist-upgrade"
+  become: true
+  ansible.builtin.apt:
+    upgrade: dist
+
+- name: "Install admin tools"
+  become: true
+  ansible.builtin.apt:
+    pkg: "{{ item }}"
+    state: latest
+  loop: "{{ apt_list }}"
+
+- name: "Configure cgroup"
+  become: true
+  ansible.builtin.lineinfile:
+    path: /boot/firmware/cmdline.txt
+    backrefs: true
+    regexp: ^((?!.*\bcgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory\b).*)$
+    line: \1 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+  notify: reboot

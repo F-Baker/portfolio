@@ -1,0 +1,37 @@
+---
+- name: "Install microk8s"
+  become: true
+  block:
+    - name: "Install microk8s via snap"
+      community.general.snap:
+        classic: true
+        name:
+          - microk8s
+
+    - name: "Add user to microk8s group"
+      user:
+        name: "{{ ansible_user }}"
+        groups: microk8s
+        append: yes
+
+    - name: "Create kube config dir"
+      file:
+        path: "/home/{{ ansible_user }}/.kube"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        state: directory
+
+    - name: "Enable microk8s modules"
+      command: microk8s enable dns cert-manager ingress helm prometheus registry community trivy
+
+    - name: "Create kube config for user"
+      command: "microk8s config"
+      register: kubeconfig
+
+    - name: "Output config to file"
+      copy:
+        content: "{{ kubeconfig.stdout }}"
+        dest: "/home/{{ ansible_user }}/.kube/config"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0644

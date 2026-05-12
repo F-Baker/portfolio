@@ -2,7 +2,7 @@
 
 ## **WARNING!** 
 
-The misuse of this plan can result in the modification of user attributes and potential impact of user access.  __Do not run this on your prod tenant__ with existing user names.   
+The misuse of this plan can result in the modification of user attributes and potential impact of user access.  __Do not run this on your prod tenant.__   
 
 ## Description
 
@@ -13,6 +13,7 @@ The users instantiated in this example are disabled by default, as per the `acco
 ## Prerequisites
 
 - Owner or Contrib within the sub
+- azcli with a validated session
 - a remote backend for the tf state and perms for your user
 - tenant ID
   - **note:** in this case, we need to provide the tenant ID in the providers.tf which **does not** support vars from a data source.  Consequently, the value is being supplied by special reserved word `ARM_TENANT_ID` in the tf-init.sh

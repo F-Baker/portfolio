@@ -1,0 +1,5 @@
+---
+- name: "Provision and configure a RPI5"
+  hosts: "dev"
+  roles:
+    - init-microk8s-on-rpi
